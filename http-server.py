@@ -21,6 +21,6 @@ url = 'http://localhost:{0}/cgi-bin/{1}'.format(PORT, cgi_script)
 
 webbrowser.open_new_tab(url)
 
-print "serving at port", PORT
+print "serving at", url
 
 httpd.serve_forever()
