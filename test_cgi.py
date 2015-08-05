@@ -1,5 +1,8 @@
 #! /usr/bin/env python2
 
+import subprocess
+
 print "Content-type: text/html"
 print ""
-print "<h1>It works!</h1>"
+birthday_string = subprocess.check_output("birthday")
+print birthday_string
