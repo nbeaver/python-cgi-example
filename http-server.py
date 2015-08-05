@@ -9,7 +9,7 @@ import CGIHTTPServer
 import webbrowser
 
 PORT = 8000
-cgi_script = "birthday.py"
+cgi_script = "date.py"
 
 server_class = BaseHTTPServer.HTTPServer
 handler_class = CGIHTTPServer.CGIHTTPRequestHandler
