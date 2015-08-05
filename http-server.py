@@ -1,23 +1,23 @@
 #! /usr/bin/env python2
 
 # https://pointlessprogramming.wordpress.com/2011/02/13/python-cgi-tutorial-1/
+# https://docs.python.org/2/library/basehttpserver.html
+# https://docs.python.org/2/library/cgihttpserver.html
 
 import BaseHTTPServer
 import CGIHTTPServer
 import webbrowser
-import cgitb; cgitb.enable()
 
 PORT = 8000
-script = "birthday.py"
+cgi_script = "birthday.py"
 
-server = BaseHTTPServer.HTTPServer
-handler = CGIHTTPServer.CGIHTTPRequestHandler
+server_class = BaseHTTPServer.HTTPServer
+handler_class = CGIHTTPServer.CGIHTTPRequestHandler
 server_address = ("", PORT)
-handler.cgi_directories = ["/cgi-bin"]
 
-httpd = server(server_address, handler)
+httpd = server_class(server_address, handler_class)
 
-url = 'http://localhost:{0}/cgi-bin/{1}'.format(PORT, script)
+url = 'http://localhost:{0}/cgi-bin/{1}'.format(PORT, cgi_script)
 
 webbrowser.open_new_tab(url)
 
