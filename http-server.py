@@ -8,16 +8,16 @@ import webbrowser
 import cgitb; cgitb.enable()
 
 PORT = 8000
-script = "test_cgi.py"
+script = "birthday.py"
 
 server = BaseHTTPServer.HTTPServer
 handler = CGIHTTPServer.CGIHTTPRequestHandler
 server_address = ("", PORT)
-handler.cgi_directories = ["/"]
+handler.cgi_directories = ["/cgi-bin"]
 
 httpd = server(server_address, handler)
 
-url = 'http://localhost:{0}/{1}'.format(PORT, script)
+url = 'http://localhost:{0}/cgi-bin/{1}'.format(PORT, script)
 
 webbrowser.open_new_tab(url)
 
