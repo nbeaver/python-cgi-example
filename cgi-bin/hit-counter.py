@@ -4,9 +4,23 @@ import subprocess
 import cgi
 import cgitb
 import time
+import os
 cgitb.enable()
 
+hit_count_path = os.path.join(os.path.dirname(__file__), "hit-count.txt")
+
+if os.path.isfile(hit_count_path):
+    hit_count = int(open(hit_count_path).read())
+    hit_count += 1
+else:
+    hit_count = 1
+
+hit_counter_file = open(hit_count_path, 'w')
+hit_counter_file.write(str(hit_count))
+hit_counter_file.close()
+
 header = "Content-type: text/html\n\n"
+
 
 date_string = time.strftime('%A, %B %d, %Y at %I:%M:%S %p %Z')
 
@@ -18,9 +32,14 @@ html = """
   <title>Current date</title>
 </head>
 <body>
-  {0}
+  <p>
+  Date: {0}
+  </p>
+  <p>
+  Hit count: {1}
+  </p>
 </body>
 </html>
-""".format(cgi.escape(date_string))
+""".format(cgi.escape(date_string), cgi.escape(str(hit_count)))
 
 print header + html
