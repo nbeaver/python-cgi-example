@@ -2,8 +2,24 @@
 
 import subprocess
 import cgi
+import cgitb
+cgitb.enable()
 
-print "Content-type: text/html"
-print ""
+header = "Content-type: text/html\n\n"
+
 date_string = subprocess.check_output("date")
-print cgi.escape(date_string)
+
+html = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Current date</title>
+</head>
+<body>
+  {0}
+</body>
+</html>
+""".format(cgi.escape(date_string))
+
+print header + html
