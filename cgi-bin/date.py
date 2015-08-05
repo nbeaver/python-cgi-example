@@ -3,11 +3,12 @@
 import subprocess
 import cgi
 import cgitb
+import time
 cgitb.enable()
 
 header = "Content-type: text/html\n\n"
 
-date_string = subprocess.check_output("date")
+date_string = time.strftime('%A, %B %d, %Y at %I:%M:%S %p %Z')
 
 html = """
 <!DOCTYPE html>
