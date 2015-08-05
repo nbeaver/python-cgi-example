@@ -9,7 +9,7 @@ import CGIHTTPServer
 import webbrowser
 
 PORT = 8000
-cgi_script = "date.py"
+script_path = "cgi-bin/hit-counter.py"
 
 server_class = BaseHTTPServer.HTTPServer
 handler_class = CGIHTTPServer.CGIHTTPRequestHandler
@@ -17,7 +17,7 @@ server_address = ("", PORT)
 
 httpd = server_class(server_address, handler_class)
 
-url = 'http://localhost:{0}/cgi-bin/{1}'.format(PORT, cgi_script)
+url = 'http://localhost:{0}/{1}'.format(PORT, script_path)
 
 webbrowser.open_new_tab(url)
 
