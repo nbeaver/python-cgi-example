@@ -9,6 +9,9 @@ import CGIHTTPServer
 import webbrowser
 
 PORT = 8000
+#TODO: check that port is available,
+# and look for a different one if it isn't.
+
 script_path = "cgi-bin/hit-counter.py"
 
 server_class = BaseHTTPServer.HTTPServer
