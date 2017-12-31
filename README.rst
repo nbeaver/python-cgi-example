@@ -29,16 +29,19 @@ Hit ``Ctrl-C`` to stop the web browser once you are finished.
 Motivation
 ----------
 
-Most tutorials for Python CGI scripts I have found have techical flaws such as:
+Most tutorials for Python CGI scripts I have seen
+have flaws such as:
 
 - Requiring installation of a web server like ``apache``
-  instead of just serving from a local directory using Python's ``SimpleHTTPServer``.
+  instead of just serving from a local directory
+  using Python's ``SimpleHTTPServer``.
 
 - Requiring write access to directories like ``/var/www/cgi-bin/``.
 
 - Not opening the browser to the correct page when the server starts.
 
-- Not storing the cgi script in a separate directory from the server source code.
+- Not storing the cgi script in a separate directory
+  from the server source code.
 
 - Not providing the code in a convenient bundle to download, run, and modify.
 
@@ -57,4 +60,5 @@ that writes to a file on disk to store the count.
 
 .. _CGI script: cgi-bin/hit-counter.py
 
-.. note:: This is a pedagogical exercise, and is not the best way to implement a hit counter in general.
+.. note:: This is a pedagogical exercise,
+          and is not the best way to implement a hit counter in general.
