@@ -16,12 +16,12 @@ Move into the directory::
 
 Run this command::
 
-    python2 ./http-server.py
+    python2 ./http_server.py
 
 This should open a browser page showing the current date
 and a hit counter that increases each time the page is reloaded.
 
-Modify `<cgi-bin/hit-counter.py>`_ and reload the page to see the effects.
+Modify `<cgi-bin/hit_counter.py>`_ and reload the page to see the effects.
 
 Hit ``Ctrl-C`` to stop the web browser once you are finished.
 
@@ -58,7 +58,7 @@ as well as pedagogical flaws such as:
 The included `CGI script`_ is a simple hit counter
 that writes to a file on disk to store the count.
 
-.. _CGI script: cgi-bin/hit-counter.py
+.. _CGI script: cgi-bin/hit_counter.py
 
 .. note:: This is a pedagogical exercise,
           and is not the best way to implement a hit counter in general.
