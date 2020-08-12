@@ -1,5 +1,5 @@
 ==========================
-Simple python2 cgi script.
+Simple python3 cgi script.
 ==========================
 
 ----------
@@ -16,7 +16,7 @@ Move into the directory::
 
 Run this command::
 
-    python2 ./http_server.py
+    python3 ./http_server.py
 
 This should open a browser page showing the current date
 and a hit counter that increases each time the page is reloaded.

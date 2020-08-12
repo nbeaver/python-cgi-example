@@ -1,4 +1,4 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python3
 
 import cgi
 import cgitb
@@ -45,4 +45,4 @@ html = """
 </html>
 """.format(cgi.escape(date_string), cgi.escape(str(hit_count)))
 
-print header + html
+print(header + html)
