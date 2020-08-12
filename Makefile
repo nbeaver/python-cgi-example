@@ -1,8 +1,8 @@
 .PHONY : all clean server
-all: README.html
+all: readme.html
 
-README.html: README.rst
-	rst2html README.rst README.html
+readme.html: readme.rst
+	rst2html readme.rst readme.html
 
 server:
 	python3 http_server.py
