@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import cgi
+import html
 import cgitb
 import time
 import os
@@ -43,6 +43,6 @@ html = """
   </p>
 </body>
 </html>
-""".format(cgi.escape(date_string), cgi.escape(str(hit_count)))
+""".format(html.escape(date_string), html.escape(str(hit_count)))
 
 print(header + html)
